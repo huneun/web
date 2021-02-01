@@ -2,19 +2,13 @@
 <html lang="ko">
 	<head>
 		<meta charset="utf-8" /> 
-		<title>길동홍</title> 
+		<title>sungeun</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="images/8.ico" /> 
-		<script> //자바와 다른 연결연산과 산술연산의 구분
-			/*var input=prompt("수량을 입력하세요","0"); 
-			prompt는 띄워진 창안에 입력란이 있는데 거기에서 입력값을 받는 내부 함수(실무에서 잘 안쓰임)
-			alert("총판매가="+input*2000);*/
-			var score=prompt("정수를 입력하세요","0");
-			//alert("총판매가="+(score+10)); 연결연산이됨 prompt는 기본적으로 문자를 받는 함수이기에 받은 숫자는 문자다. 
-			//그래서 (score+10)속 +는 연결연산이되었다.
-			alert("총판매가="+(Number(score)+10)); //이렇게 하면 문자가 숫자로 캐스팅됨\
-			//만일 alert("총판매가="+score*10)); 이라면 *가 ''를무시한것 처럼 문자인 score도 숫자로 산술연산해버림
-			
+		<script> 
+			var score = prompt("prompt는 값을 문자로 받아 처리합니다.", "0");
+			alert("prompt에 입력된 값에 + 덧셈을 하기 위해서는 Number()로 캐스팅 합니다."+Number(score)+10);
+			alert("prompt에 입력된 값을 * 곱하기 위해서는 캐스팅이 필요없습니다. 자동으로 ''를 풀어버리기 때문입니다."+score*10);
 		</script>
 	</head>
 	<body>
