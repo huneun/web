@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>suneun</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<script> /*내부스크립트*/
+			window.onload=function(){
+				var data = new Date();
+				var hour = data.getHours();
+				var output = "";
+				if(hour<8){
+					output +="<ul>";
+					output +="<li>프랑스</li>";
+					output +="<li>이태리</li>";
+					output +="<li>독일</li>";
+					output +="</ul>";
+				}else{
+					output +="<ul>";
+					output +="<li>스위스</li>";
+					output +="<li>덴마크</li>";
+					output +="<li>스웨덴</li>";
+					output +="</ul>";
+				}
+				document.body.innerHTML+=output;
+			}
+		</script>
+		
+	</head>
+	<body>
+		<h1>자바스크립트 문법</h1>
+		<!--홈페이지를 만드는 3가지 프로그램-->
+		<!--html-홈페이지 뼈대-->
+		<!--css-레이아웃, 다자인-->
+		<!--javascript-정적인 홈페이지를 동적으로 제작 (DOM-document object model 기타 등등)-->
+	</body> 
+</html>
