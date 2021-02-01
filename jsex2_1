@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>sungeun</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<script> 
+		//자바와 다른 연산기호 사용법을 이해하자
+		alert('10'+10); // 연결연산
+		alert('10'*5); //산술연산
+		alert('10'*'7'); //산술연산
+		</script>
+	</head>
+	<body>
+		<h1>자바스크립트 문법</h1>
+		
+	</body> 
+</html>
