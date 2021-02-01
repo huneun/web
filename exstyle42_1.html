@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--position속성 -->
+		<!--어떤물체가 위치 값(top, right, bottom, left)을 갖기 위해 사용하는 속성-->
+		<!--위치와 관련된 공식 꼭 외우자! -->
+		<!--부모 position이 없으면 absolute경우 부모의 부모의 영역을 기준으로 위치값이 설정되어 부모에게도 position이 있어야함-->
+		<style> 
+			#content {
+				position: relative; /*box클래스의 이름을 갖는 태그의 부모가 content position이 있어야 
+				제대로 된 자식태그들의 위치값을 설정 할 수 있다.*/
+				border: 1px solid;
+				width: 400px;
+				height: 100px;
+				overflow: scroll;
+			}
+			.box {
+				width: 100px;
+				height: 100px;
+				position: absolute; 
+			}
+			.box:nth-child(1) {
+				background-color: red;
+				left:10px; top:10px;
+				z-index: 10;
+			}
+			.box:nth-child(2) {
+				background-color: green;
+				left:50px; top:50px;
+				
+				z-index: 5;
+			}
+			.box:nth-child(3) {
+				left:90px; top:90px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>나는 위에 있는 자료</h1>
+		<div id="content">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+		<h1>나는 아래 있는 자료</h1>
+	</body>
+</html>

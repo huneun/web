@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--float속성-->
+		
+		<style> 
+			body {
+				width: 960px; 
+				margin: 0 auto; /*auto로 쓰면 해상도에 따라 자동으로 가운데 정렬*/
+			}
+			header {
+				border: 1px solid;
+				text-align: center;
+			}
+			#content>aside {
+				width:200px;
+				float: left;
+				border: 1px solid
+			}
+			#content>section {
+				width: 720px;
+				float: right;
+				border: 1px solid
+			}
+			footer {
+				clear: both; /*또는 content에 overflow: hidden 또는 높이를 줌*/
+				border: 1px solid;
+				text-align: center;
+				height: 100px;
+			}
+			#tel {
+				position: fixed; /*화면의 절대 위치 스크롤할 때 내용이 따라 내려감*/
+				right: 150px;
+				top:100px;
+				border 2px dashed red;
+			}
+		</style>
+	</head>
+	<body>
+	<!--	<div id="header">
+			div태그를 대신하는 의미를 세분화한 시멘틱태그가 나옴
+			</div> -->
+		<header>
+			<h1>페이지 제목(로고)</h1>
+			<nav>
+				<h2>메뉴를</h2>
+			</nav>
+		</header>
+		<div id="content">
+			<aside>
+				<h2>대한항공, 문화공원 지정 철회</h2>
+				<p>실제로 지난 6월 18일 서울특별시의회 회의록에 따르면 담당 공무원은 "부지를 묶어 놓은 이후 공론화를 추진하겠다"라며 "어떤 시설을 설치할 것인지도 결정되지 않았다"고 말했다.</p>
+			</aside>
+			<section>
+				<article> <!--본문의 자세한 내용을 article이라고 한다.-->
+					<h2>내원객들로 붐비는 병원</h2>
+					<p>의과대학 정원 확대와 공공의대 설립 등 정부의 의료정책에 반대한 제2차 전국의사 총파업 사흘째인 28일 오전 서울 종로구 서울대학교병원 어린이병원이 내원객들로 붐비고 있다.</p>
+				</article>
+				<article>
+					<h2>아파트 코로나 집단감염 경로, 환기구는 아닌 듯…남은 가능성은</h2>
+					<p>서울 구로구의 한 아파트에서 발생한 신종 코로나바이러스 감염증(코로나19) 집단감염과 관련해 바이러스 전파 경로로 환기구가 의심됐으나, 해당 환기구에서 채취한 검체가 모두 음성으로 판정됐다. 이에 따라 '아파트 환기구를 통해 바이러스가 퍼졌을 수 있다'는 추측은 설득력을 잃게 됐다.</p>
+				</article>
+			</section>
+		</div>
+		<footer>
+			<address>성남시 분당구</address>
+		</footer>
+		
+		<div id="tel">
+			<h3>광고문의</h3>
+			<p>010-7777-8888</p>
+		</div>
+	</body>
+</html>

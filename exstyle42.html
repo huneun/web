@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--position속성 -->
+		<!--어떤 물체가 위치 값(top, right, bottom, left)을 갖기 위해 사용하는 속성-->
+		<style> 
+			.box {
+				width: 100px;
+				height: 100px;
+				position: absolute; 
+				/*position: relative 상대적위치(각자 위치를 잡는다는 뜻)*/
+				/*position: absolute 부모(div의 부모는 지금body다)의 영역에서의 위치(부모를 기준으로 위치를 잡는다.)*/
+			}
+			.box:nth-child(1) {
+				background-color: red;
+				left: 10px; top: 10px;
+				z-index: 10;/*숫자가 높을 수록 위(레이어 순서)로 올라옴, 안주면 배치한 순서*/
+				/*중간에 새로운 레이어가 생기더라도록 순서를 맞추기 편하게 10단위로 설정하라*/
+
+			}
+			.box:nth-child(2) {
+				background-color: green;
+				left: 50px; top: 50px;
+				z-index: 5;
+			}
+			.box:nth-child(3) {
+				background-color: blue;
+				left: 90px; top: 90px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--변형기법-->
+		<!--1.이동 2.크기변경 3.회전 4.기울임-->
+		<!--1.이동 translate-->
+	
+		<style> 
+			img {
+				transition: transform 1s;
+			}
+			img:hover {
+				transform: translate(30px, 50px);
+				/*translate(x,y) 원래 위치에서 x,y만큼 이동이 된 걸 볼 수 있다.*/
+				/*translateX(30px) 원래 위치에서 x만큼 이동*/
+			}
+		</style>
+	</head>
+	<body>
+		<img src="images/car_green.jpg" alt="자동차" />
+	</body>
+</html>

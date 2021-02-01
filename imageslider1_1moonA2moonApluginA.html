@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>플러그인</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			h2 {
+				text-align: center;
+			}
+			input, lable {
+				margin-bottom: 12px;
+				padding: 0.4em;
+				width: 95%;
+			}
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script> //무브슬라이드 효과를 플러그인으로~	 //주의점 플러그인을 만든 사람이 기입한 아이디나 클래스이름이 내가 만들 이름과 같으면 충돌남!
+			$(document).ready(function (){
+				$('#dialog').dialog({ //dialog 플러그인 제공속성
+					autoOpen:false,
+					buttons: {
+						저장: function(){
+							var eName=$('#event_name').val();
+							var eDate=$('#event_date').val();
+							$('<h1></h1>').html(eName+' : '+eDate).appendTo('#output');
+							$('#event_name').val(''); //내용을 지우는 역할
+							$('#event_date').val(''); //내용을 지우는 역할
+							$('#dialog').dialog('close');
+						},
+						초기화: function(){
+							$('#event_name').val('');
+							$('#event_date').val(''); 
+						},
+						취소: function(){
+							$('#event_name').val('');
+							$('#event_date').val('');
+							$('#dialog').dialog('close');
+						}
+					},
+					//modal: true //madal 속성이 없으면 modalist
+					//다이얼로그 대화상자가 띄워질 때 메인웹창이랑 왔다 갔다할수 있는게 modalist이다.
+					//즉, modal이란 dialog의 창이 다수행되어 닫혀야 메인창의 작업을 실행할 수 있게 한 것
+				});
+				$('#event_date').datepicker({
+					dateFormat: 'yy년 mm월 dd일', //날짜 표시 방식 바꾸기
+					numberOfMonths:3 //기본으로 보일 달력의 수
+				});
+				$('#btmopen').click(function(){
+					$('#dialog').dialog('open');
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<h1>여기는 메인페이지</h1>
+		<button id="btmopen">일정등록</button>
+		<hr />
+		<div id="output"></div>
+		<!--Dialog-->
+		<div id="dialog" title="일정관리">
+			<h2>나의 일정</h2>
+			<label for="event_name">일정 이름</label>
+			<input type="text" id="event_name"/>
+			<label for="event_date">날짜</label>
+			<input type="text" id="event_date"/>
+		</div>
+	</body> 
+</html>

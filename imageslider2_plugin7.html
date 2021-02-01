@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>플러그인</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script> //.tabs() 탭창으로 div분류
+			$(document).ready(function (){
+				$('#tabs').tabs({//부모 선택자 안의 a태그에 d아이디를 링크걸어 div로 묶어 사용한다.
+					event: 'mouseover' //default 값인 클릭이 mouseover로 바뀌어 탭이 넘어간다.
+				}); 
+			})
+		</script>
+	</head>
+	<body>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">생활뉴스</a></li>
+				<li><a href="#tabs-2">스포츠뉴스</a></li>
+				<li><a href="#tabs-3">경제뉴스</a></li>
+			</ul>
+			<div id="tabs-1">
+				<h3>괴산대찰옥수수 비빔밥</h3>
+				<p>대학찰옥수수를 넣어 지은 밥에 상추, 고기, 당근, 호박, 콩나물을 넣어 비벼 먹으면 된다. 현재 4000원에 판매 중이다.</p>
+			</div>
+			<div id="tabs-2">
+				<p>토론토, 에이스 류현진에 5일 휴식 주고 와일드카드 2차전 맡겨</p> 
+				<p> 세인트루이스, 루키 김광현에게 와일드카드 1차전 맡기는 파격</p>
+			</div>
+			<div id="tabs-3">
+				<p> 지난 겨울 아파트 등 공동주택 2만3000여 가구가 난방비를 최소 한달 동안 한 푼도 내지 않은 것으로 나타났다.</p>
+				<img src="images/car_green.jpg" />
+			</div>
+		</div>
+	</body> 
+</html>

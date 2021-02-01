@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--전환효과 :hover(마우스커서를 올렸을때)와 transition(속도) 넣기-->
+	
+		<style> 
+			#area {
+				width: 100px;
+				height: 100px;
+				border:  1px solid red;
+				background: orange;
+				opacity:0.2;
+				transition: height 1s, width 3s, opacity 1s; 
+				/*넓이가 늘어나는 에니메이션효과 (ease-in 효과의 속도를 점점빠르게 ease-out 점점느리게)*/
+			}
+			#area:hover{
+				width: 200px;
+				height: 200px;
+				opacity: 1;
+				border: 5px dotted blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="area">
+			
+		</div>
+	</body>
+</html>

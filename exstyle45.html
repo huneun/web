@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--그라데이션 넣기-->
+	
+		<style> 
+			#area {
+				height: 200px; /*공급업체 접두사(Vendor prefix) 
+				그라디언트를 적용하는 문법이 브라우저 별로 달라서 '벤더 프리픽스'를 적용해야 제대로 반영됩니다.*/
+				background: -moz-linear-gradient(left,  #ff0000 0%, #ffff00 50%, #00ff00 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(50%,#ffff00), color-stop(100%,#00ff00)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(left,  #ff0000 0%,#ffff00 50%,#00ff00 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(left,  #ff0000 0%,#ffff00 50%,#00ff00 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(left,  #ff0000 0%,#ffff00 50%,#00ff00 100%); /* IE10+ */
+				background: linear-gradient(to right,  #ff0000 0%,#ffff00 50%,#00ff00 100%); /* W3C */ /*웹표준*/
+
+				/*linear-gradient(to right 하면 그라데이션을 좌에서우측방향으로 색빠짐을 넣는다는 뜻
+				 , #f00 0%, #0f0 50%, #00f 100%)은 각 색상과 위치이다.*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="area">
+			
+		</div>
+	</body>
+</html>

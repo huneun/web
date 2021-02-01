@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>이미지 슬라이더</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			#img-frame {
+				width: 300px;
+				height: 200px;
+				/*overflow: hidden;*/
+				position: relative;
+			}
+			.img-slider {
+				width: 2500px;
+				position: relative;
+			}
+			.img-slider>img {
+				width: 300px;
+				height: 200px;
+				float: left;
+			}
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script> //
+			$(document).ready(function(){
+				$('.img-slider').animate({
+					left: -(index*600)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="img-frame">
+			<div class="img-slider">
+				<img src="images/Chrysanthemum.jpg"/>
+				<img src="images/Koala.jpg"/>
+				<img src="images/Jellyfish.jpg"/>
+				<img src="images/Desert.jpg"/>
+				<img src="images/Penguins.jpg"/>
+			</div>
+		</div>	
+	</body> 
+</html>

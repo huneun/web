@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--display 속성-->
+		
+		<style> 
+			p{/*display: inline은 블록레벨요소를 인라인으로 바꾸어줌*/
+				display: inline-block;	/*display: inline-block은 인라인이지만 블록레벨요소처럼 자기영역의 크기를 받을 수 있다.*/
+				background-color: red;
+				width: 300px;
+				height: 50px;
+				margin: 10px;
+				opacity: 0.5; /*opacity 투명도0~1*/
+			}
+		</style>
+	</head>
+	<body>
+		<span>인라인레벨요소1</span>
+		<p>블럭레벨요소1</p> <!--아무리 크기를 주어도 옆에는 아무것도 못온다.-->
+		<span>인라인레벨요소2</span>
+	</body>
+</html>

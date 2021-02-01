@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>플러그인</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			img{
+				display: none;
+			}
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script> //ui로 달라지는 속성들 // show, hide
+			$(document).ready(function (){
+				$('button').click(function(){
+					$('img').show('explode', 2000);
+					//css에서 display: none; 지우고 $('img').hide('explode', 2000);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button>이미지보기</button>
+		<img src="images/car_green.jpg">
+	</body> 
+</html>

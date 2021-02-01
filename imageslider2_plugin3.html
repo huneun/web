@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>플러그인</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			.high-light{
+				background-color: yellow;
+				color: red;
+			}
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script> //소소하지만 웃긴 플러그인
+			$(document).ready(function (){
+				$('h1').tooltip(); //div로 title효과
+				$('h1').hover(function(){
+					$(this).addClass('high-light', 1000)//ui가 있으면 adClass에 fadeout효과처럼 속도를 줄 수 있음
+				}, function(){
+					$(this).removeClass('high-light')
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h1 title="9월 30일~ 10월4일">추석 연휴 잘 보내세요</h1>
+	</body> 
+</html>

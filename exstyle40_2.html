@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--float(붕띄우다) 더자세히 이해하기 (어려움주의)-->
+		
+		<style> 
+			#menu {
+				overflow: hidden; /*p태그가 밑으로 내려가는 두번째 방법*/
+				/*부모가 자식을 자신의 영역 안으로 들여놓는 것 그러나 이번에는 자식을 감싼 영역만큼의 높이가 부모에게 생긴다.*/
+			}
+			#menu>li {
+				list-style: none;
+				float: left; /*왼쪽부터 오른쪽으로 내림차순으로 가로정렬 됨*/
+				/*부모에게 종속되있다가 집 나갔다는 개념이 옳다. 실제로 부모태그인 ul의 영역의 높이가 없는 것을 확인 할 수 있다. */
+				/*블록레벨요소가 된것은 아니지만 인라인처럼 영역을 가질수 있다.*/
+				padding: 15px;
+				background-color: #4374D9;	
+				color: #fff;			
+			}
+			#menu>li:hover {
+				background-color: #030086;
+				color: #000;	
+				/*p태그도 오른쪽에 붕떠 버린다. 다음의 블록레벨요소도 같이 붕뜨는게 특징! 
+				 * 이것을 다음 소스부터는 적용되지 않도록 float속성을 해제 해야한다. 이것이 clear이다!*/
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="menu" >
+			<li>회사소개</li>
+			<li>제품소개</li>
+			<li>커뮤니티</li>
+			<li>자료실</li>
+			<li>게시판</li>
+		</ul>
+		
+		<p>나는 본문에 있는 내용이다.</p>
+	</body>
+</html>

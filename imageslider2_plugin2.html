@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>플러그인</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script> //accodion
+			$(document).ready(function (){
+				$('#acco').accordion({
+					heightStyle:'content' //이 속성으로 각자 자신의 크기만큼의 목록창의 크기가 정해진다.
+				}); //속성이 없는 accodion은 목록중 가장 큰 크기에 맞줘 동일한 크기의 여닫히는 목록이 완성된다.
+			})
+		</script>
+	</head>
+	<body>
+		<div id="acco">
+			<h3>한가위 슈퍼 코리안데이</h3>
+			<div>
+				<p>류현진은 10월 1일 오전 5시(한국시간)에 미국 플로리다주 세인트피터즈버그 트로피카나필드에서 열리는 탬파베이 레이스와의 아메리칸리그 와일드카드 시리즈 2차전에 선발 투수로 등판한다.</p>
+				<img src="images/smile.png"/>
+			</div>
+			<h3>美 닮아가는 中경제</h3>
+			<div>
+				<p>중국이 자본시장 빗장을 풀면서 국내투자자들의 투자기회도 대폭 확대될 전망이다. 중국은 오는 11월부터 외국인 투자 절차를 간소화하고 선물·옵션 등 파생선물 투자도 허용한다. 최근 위안화 평가절상도 중국 자본시장 개방에 따른 글로벌 자금의 흐름을 반영하고 있다. 전문가들은 가장 먼저 중국 IT기업의 성장성을 높게 내다봤다.</p>
+			</div>
+			<h3>괴산대찰옥수수 비빔밥</h3>
+			<div>
+				<p>대학찰옥수수를 넣어 지은 밥에 상추, 고기, 당근, 호박, 콩나물을 넣어 비벼 먹으면 된다. 현재 4000원에 판매 중이다.</p>
+				<img src="images/apple.jpg" width="300"/>
+			</div>
+		</div>
+	</body> 
+</html>

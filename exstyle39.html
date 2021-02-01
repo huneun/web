@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>길동홍</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<!--박스속성-->
+		<!--홈페이지만들때 바깥여백과 상관없이 배치가 밀릴때는 테두리와 안쪽 여백까지 조심-->
+		<!--크기조절없이 집어넣는법-->
+		<style> 
+			div:first-child {
+				width: 300px;
+				height: 300px;
+				background-color: yellow;
+				border: 3px solid; 
+				padding: 10px;
+				box-sizing: content-box;
+				/*border랑 padding을 제외하고 width와 height의 크기를 설정*/
+			}
+			div:last-child {
+				width: 300px;
+				height: 300px;
+				background-color: green;
+				border: 3px solid; 
+				padding: 10px;
+				box-sizing: border-box; 
+				/*border랑 padding까지 고려하여 width와 height의 크기를 설정*/
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+	</body>
+</html>
