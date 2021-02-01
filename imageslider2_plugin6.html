@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" /> 
+		<title>플러그인</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="images/8.ico" /> 
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />
+		<style>
+			
+		</style>
+		<script src="js/jquery-3.5.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script> //.autocomplete()
+			$(document).ready(function (){
+				var words=['able','apple','application','bear','bit','bind','car','cable'];
+				$('#tags').autocomplete({
+					source: words //배열에 저장된 단어의 알파벳만 쳐도 연관단어로 나열되어 나오게 함
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div>
+			<label for="tags">단어</label>
+			<input type="text" id="tags" />
+		</div>
+	</body> 
+</html>
